@@ -32,12 +32,11 @@ Pins used on the Raspberry Pi Pico:
 
 The I2C Switch library uses the following pins on the Raspberry Pi Pico board.
 
-| Pin      | Use        |
-|----------|------------|
-| 12       | Reset Pin  |
-| 20       | I2C SDA    |
-| 21       | I2C SCL    |
-
+| Pico Pin | Pico GPIO| Function |  Pi Pin  | Pi GPIO |
+|----------|----------|----------|----------|---------|
+| 26       | 20       | I2C SDA  | 3        | GPIO 2  |
+| 27       | 21       | I2C SCL  | 5        | GPIO 3  |
+| 11       | 8        | Reset    | 13       | GPIO 27 |
 You will also need to connect 3.3V, 5V and GND on the I2C Switch GPIO header.
 
 

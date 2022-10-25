@@ -32,10 +32,10 @@ Pins used on the Raspberry Pi Pico:
 
 The ADC Differential Pi library uses the following pins on the Raspberry Pi Pico board.
 
-| Pin      | Use        |
-|----------|------------|
-| 20       | I2C SDA    |
-| 21       | I2C SCL    |
+| Pico Pin | Pico GPIO| Function | Pi Pin  | Pi GPIO |
+|----------|----------|----------|---------|---------|
+| 26       | 20       | I2C SDA  |3        | GPIO 2  |
+| 27       | 21       | I2C SCL  |5        | GPIO 3  |
 
 You will also need to connect 3.3V, 5V and GND on the ADC Differential Pi GPIO header.
 
