@@ -33,17 +33,23 @@ Pins used on the Raspberry Pi Pico:
 
 The ADC-DAC Pi library uses the following pins on the Raspberry Pi Pico board.
 
-| Pin      | Use        |
-|----------|------------|
-| 2        | SPI SCK    |
-| 3        | SPI MOSI   |
-| 4        | SPI MISO   |
-| 5        | ADC SPI CS | 
-| 19       | DAC SPI CS |
+| Pico Pin | Pico GPIO| Function     | Pi Pin  | Pi GPIO |
+|----------|----------|--------------|---------|---------|
+| 4        | GP2      | SPI SCK      | 23      | GPIO 11 |
+| 5        | GP3      | SPI0 TX      | 19      | GPIO 10 |
+| 6        | GP4      | SPI0 RX      | 21      | GPIO 9  |
+| 7        | GP5      | ADC SPI CE0  | 24      | GPIO 8  |
+| 25       | GP19     | DAC SPI CE1  | 26      | GPIO 7  |
 
 To use different pin you can edit the ADCDACPi.py on lines 24 to 36.  
 
 You will also need to connect 3.3V, 5V and GND on the ADC-DAC Pi GPIO header.  
+
+---
+
+Wiring Diagram:
+----------
+![Connecting the ADC DAC Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/picoadcdacpi.png "Connecting the ADC DAC Pi to a Pico")
 
 ---
 
