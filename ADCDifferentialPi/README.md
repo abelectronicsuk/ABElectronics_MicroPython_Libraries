@@ -41,6 +41,12 @@ You will also need to connect 3.3V, 5V and GND on the ADC Differential Pi GPIO h
 
 ---
 
+Wiring Diagram:
+----------
+![Connecting the ADC Differential Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-adcdifferentialpi.png "Connecting the ADC Differential Pi to a Pico")
+
+---
+
 Classes:
 ----------  
 ```

@@ -39,6 +39,11 @@ The IO Zero 32 library uses the following pins on the Raspberry Pi Pico board.
 
 You will also need to connect 3.3V, 5V and GND on the IO Zero 32 GPIO header.
 
+---
+
+Wiring Diagram:
+----------
+![Connecting the IO Zero 32 to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-iozero32.png "Connecting the IO Zero 32 to a Pico")
 
 Classes:
 ----------  

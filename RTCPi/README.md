@@ -32,12 +32,18 @@ Pins used on the Raspberry Pi Pico:
 
 The RTC Pi library uses the following pins on the Raspberry Pi Pico board.
 
-| Pico Pin | Pico GPIO| Function | Pi Pin  | Pi GPIO |
-|----------|----------|----------|---------|---------|
-| 26       | 20       | I2C SDA  |3        | GPIO 2  |
-| 27       | 21       | I2C SCL  |5        | GPIO 3  |
+| Pin      | Use        |
+|----------|------------|
+| 20       | I2C SDA    |
+| 21       | I2C SCL    |
 
 You will also need to connect 3.3V, 5V and GND on the RTC Pi GPIO header.
+
+---
+
+Wiring Diagram:
+----------
+![Connecting the RTC Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-rtcpi.png "Connecting the RTC Pi to a Pico")
 
 Class:
 ----------

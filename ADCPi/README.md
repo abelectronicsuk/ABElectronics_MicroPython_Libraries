@@ -40,6 +40,12 @@ The ADC Pi library uses the following pins on the Raspberry Pi Pico board.
 You will also need to connect 3.3V, 5V and GND on the ADC Pi GPIO header.
 
 ---
+
+Wiring Diagram:
+----------
+![Connecting the ADC Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-adcpi.png "Connecting the ADC Pi to a Pico")
+
+---
 Classes:
 ----------  
 ```

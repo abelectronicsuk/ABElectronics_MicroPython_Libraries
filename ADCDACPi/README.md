@@ -49,7 +49,7 @@ You will also need to connect 3.3V, 5V and GND on the ADC-DAC Pi GPIO header.
 
 Wiring Diagram:
 ----------
-![Connecting the ADC DAC Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/picoadcdacpi.png "Connecting the ADC DAC Pi to a Pico")
+![Connecting the ADC DAC Pi to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-adcdacpi.png "Connecting the ADC DAC Pi to a Pico")
 
 ---
 

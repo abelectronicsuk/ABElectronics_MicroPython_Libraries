@@ -39,6 +39,12 @@ The I2C Switch library uses the following pins on the Raspberry Pi Pico board.
 | 11       | 8        | Reset    | 13       | GPIO 27 |
 You will also need to connect 3.3V, 5V and GND on the I2C Switch GPIO header.
 
+---
+
+Wiring Diagram:
+----------
+![Connecting the I2C Switch to a Pico!](https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries/raw/main/images/pico-i2cswitch.png "Connecting the I2C Switch to a Pico")
+
 
 # Class: I2CSwitch #
 
