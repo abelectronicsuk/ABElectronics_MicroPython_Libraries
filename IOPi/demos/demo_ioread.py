@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics IO Pi | Digital I/O Read Demo for MicroMicroPython Library
+AB Electronics UK IO Pi | Digital I/O Read Demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create IOPI.py file and copy contents from  IOPI.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called IOPI.py, copy contents from IOPI.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_ioread.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_ioread.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -36,8 +36,8 @@ def main():
     """
     iobus2 = IOPi(0x21,20,21)
 
-    # We will read the inputs 1 to 16 from the I/O bus so set port 0 and
-    # port 1 to be inputs and enable the internal pull-up resistors
+    # We will read the inputs 1 to 16 from the I/O bus so set Port 0 and
+    # Port 1 as inputs and enable the internal pull-up resistors
 
     iobus1.set_port_direction(0, 0xFF)
     iobus1.set_port_pullups(0, 0xFF)

@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics ADC Pi HIH4000 humidity sensor demo for MicroMicroPython Library
+AB Electronics UK ADC Pi HIH4000 humidity sensor demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create ADCPi.py file and copy contents from  ADCPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called ADCPi.py, copy contents from ADCPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_hih4000.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_hih4000.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -23,7 +23,7 @@ ADC Pi input pin to make the sensor work correctly
 Initialise the ADC device using the default addresses and sample rate,
 change this value if you have changed the address selection jumpers
 
-Sample rate can be 12,14, 16 or 18
+The sample rate can be 12, 14, 16 or 18
 
 """
 import time
@@ -53,7 +53,7 @@ def main():
 
     while True:
 
-        # read from adc channels and print to screen
+        # read from the ADC channels and print to screen
         print("Humidity on channel 1: %0.1f%%" %
               calc_humidity(adc.read_voltage(1)))
 

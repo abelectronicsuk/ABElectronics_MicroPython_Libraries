@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics IO Pi | Digital I/O Write Demo for MicroMicroPython Library
+AB Electronics UK IO Pi | Digital I/O Write Demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create IOPI.py file and copy contents from  IOPI.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called IOPI.py, copy contents from IOPI.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_iowrite.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_iowrite.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -31,7 +31,7 @@ def main():
     # Create an instance of the IOPi class with an I2C address of 0x20 with SDA on pin 20 and SCL on pin 21
     iobus = IOPi(0x20,20,21)
 
-    # We will write to the pins 9 to 16 so set port 1 to be outputs turn off
+    # We will write to the pins 9 to 16 so set port 1 as outputs turn off
     # the pins
     iobus.set_port_direction(1, 0x00)
     iobus.write_port(1, 0x00)
@@ -46,7 +46,7 @@ def main():
         # turn off all of the pins on bank 1
         iobus.write_port(1, 0x00)
 
-        # now turn on all of the leds in turn by writing to one pin at a time
+        # now turn on all of the LEDs in turn by writing to one pin at a time
         iobus.write_pin(9, 1)
         time.sleep(0.1)
         iobus.write_pin(10, 1)
@@ -63,7 +63,7 @@ def main():
         time.sleep(0.1)
         iobus.write_pin(16, 1)
 
-        # and turn off all of the leds in turn by writing to one pin at a time
+        # and turn off all of the LEDs in turn by writing to one pin at a time
         iobus.write_pin(9, 0)
         time.sleep(0.1)
         iobus.write_pin(10, 0)

@@ -3,7 +3,7 @@
  ================================================
  AB Electronics UK: IO Pi 32-Channel Port Expander
 
-Raspberry Pi Pico MicroMicroPython Library
+Raspberry Pi Pico MicroPython Library
 ================================================
 
 
@@ -24,7 +24,7 @@ class IOPi(object):
     #
     """
 
-    # Define registers values from datasheet
+    # Define registers values from the datasheet
     IODIRA = const(0x00)  # IO direction A - 1= input 0 = output
     IODIRB = const(0x01)  # IO direction B - 1= input 0 = output
     # Input polarity A - If a bit is set, the corresponding GPIO register bit
@@ -33,10 +33,10 @@ class IOPi(object):
     # Input polarity B - If a bit is set, the corresponding GPIO register bit
     # will reflect the inverted value on the pin.
     IPOLB = const(0x03)
-    # The GPINTEN register controls the interrupt-onchange feature for each
+    # The GPINTEN register controls the interrupt-on-change feature for each
     # pin on port A.
     GPINTENA = const(0x04)
-    # The GPINTEN register controls the interrupt-onchange feature for each
+    # The GPINTEN register controls the interrupt-on-change feature for each
     # pin on port B.
     GPINTENB = const(0x05)
     # Default value for port A - These bits set the compare value for pins
@@ -48,23 +48,21 @@ class IOPi(object):
     # opposite from the register bit, an interrupt occurs.
     DEFVALB = const(0x07)
     # Interrupt control register for port A.  If 1 interrupt is fired when the
-    # pin matches the default value, if 0 the interrupt is fired on state
-    # change
+    # pin matches the default value, if 0 the interrupt is fired on state change
     INTCONA = const(0x08)
     # Interrupt control register for port B.  If 1 interrupt is fired when the
-    # pin matches the default value, if 0 the interrupt is fired on state
-    # change
+    # pin matches the default value, if 0 the interrupt is fired on state change
     INTCONB = const(0x09)
     IOCON = const(0x0A)  # see datasheet for configuration register
     GPPUA = const(0x0C)  # pull-up resistors for port A
     GPPUB = const(0x0D)  # pull-up resistors for port B
     # The INTF register reflects the interrupt condition on the port A pins of
     # any pin that is enabled for interrupts. A set bit indicates that the
-    # associated pin caused the interrupt.
+    # associated pin caused the interrupt to occur.
     INTFA = const(0x0E)
     # The INTF register reflects the interrupt condition on the port B pins of
     # any pin that is enabled for interrupts.  A set bit indicates that the
-    # associated pin caused the interrupt.
+    # associated pin caused the interrupt to occur.
     INTFB = const(0x0F)
     # The INTCAP register captures the GPIO port A value at the time the
     # interrupt occurred.
@@ -80,7 +78,7 @@ class IOPi(object):
     # variables
     __ioaddress = 0x20  # I2C address
     # initial configuration
-    # see IOCON page in the MCP23017 datasheet for more information.
+    # see the IOCON page in the MCP23017 datasheet for more information.
     __conf = 0x02
     __bus = None
 
@@ -90,12 +88,12 @@ class IOPi(object):
 
         :param address: i2c address for the target device, 0x20 to 0x27
         :type address: int
-        :param address: sda pin
-        :type address: int
-        :param address: scl pin
-        :type address: int
+        :param sda: SDA pin
+        :type sda: int
+        :param scl: SCL pin
+        :type scl: int
         :param initialise: True = direction set as inputs, pull-ups disabled,
-                           ports not inverted.
+                           ports are not inverted.
                            False = device state unaltered., defaults to True
         :type initialise: bool, optional
         
@@ -137,12 +135,11 @@ class IOPi(object):
         """
         Internal method for getting an instance of the i2c bus
 
-        :param bus: I2C bus number.  If value is None the class will try to
+        :param bus: I2C bus number.  If the value is None the class will try to
                     find the i2c bus automatically using the device name
         :type bus: int
-        :return: i2c bus for target device
-        :rtype: SMBus
-        :raises IOError: Could not open the i2c bus
+        :return: i2c bus for the target device
+        :rtype: machine.I2C
         """
         i2c__bus = bus
 
@@ -160,7 +157,7 @@ class IOPi(object):
         :type byte: int
         :param bit: location within value to check
         :type bit: int
-        :return: value of selected bit, 0 or 1
+        :return: value of the selected bit, 0 or 1
         :rtype: int
         """
         value = 0
@@ -646,7 +643,7 @@ class IOPi(object):
     def mirror_interrupts(self, value):
         """
         Sets whether the interrupt pins INT A and INT B are independently
-        connected to each port or internally connected together
+        connected to each port or internally connected
 
         :param value: 1 = The INT pins are internally connected,
                       0 = The INT pins are not connected.
@@ -734,7 +731,7 @@ class IOPi(object):
         """
         These bits set the compare value for pins configured for
         interrupt-on-change on the selected port.
-        If the associated pin level is the opposite from the register bit, an
+        If the associated pin level is the opposite of the register bit, an
         interrupt occurs.
 
         :param port: 0 = pins 1 to 8, 1 = pins 9 to 16
@@ -841,7 +838,7 @@ class IOPi(object):
         :param port: 0 = pins 1 to 8, 1 = pins 9 to 16
         :type port: int
         :raises ValueError: port out of range: 0 or 1
-        :return: interrupt status for selected port
+        :return: interrupt status for the selected port
         :rtype: int
         """
         return self.__get_port(port, self.INTFA, self.INTFB)

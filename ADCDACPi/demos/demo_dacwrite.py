@@ -3,20 +3,20 @@
 """
 ================================================
 AB Electronics UK ADC-DAC Pi 2-Channel ADC, 2-Channel DAC 
-Write Demo for MicroMicroPython Library
+Write Demo for the MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create ADCDACPi.py file and copy contents from  ADCDACPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called ADCDACPi.py, copy contents from ADCDACPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_dacwrite.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_dacwrite.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 ================================================
 
-this demo will generate a 1.5V p-p square wave at 1Hz
+This demo will generate a 1.5V p-p square wave at 1Hz
 """
 
 import time
@@ -29,7 +29,7 @@ def main():
     Main program function
     '''
 
-    # create an instance of the ADCDAC Pi with a DAC gain set to 1
+    # create an instance of the ADCDACPi class with a DAC gain set to 1
     adcdac = ADCDACPi(1)
 
     while True:

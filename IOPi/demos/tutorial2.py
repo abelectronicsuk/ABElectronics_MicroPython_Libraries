@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics IO Pi 32-Channel Port Expander - Tutorial 2 for MicroMicroPython Library
+AB Electronics UK IO Pi 32-Channel Port Expander - Tutorial 2 for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create IOPI.py file and copy contents from  IOPI.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called IOPI.py, copy contents from IOPI.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named tutorial2.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named tutorial2.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 

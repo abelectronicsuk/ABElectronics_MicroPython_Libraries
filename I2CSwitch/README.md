@@ -7,7 +7,7 @@ The example python files can be found in /ABElectronics_MicroPython_Libraries/I2
 
 ### Downloading and Installing the library
 
-To download to your Raspberry Pi type in terminal: 
+To download to your Raspberry Pi type in the terminal: 
 
 ```
 git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries.git
@@ -15,7 +15,7 @@ git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries
 
 To install the MicroPython Library use the Thonny Python IDE from https://thonny.org/
 
-Create a file for your chosen board and copy the contents of the python file in that board's directory. For example for the I2C Switch create a new file in thonny called I2CSwitch.py and copy contents from  I2CSwitch.py into the new file and save it onto the Raspberry Pi Pico board.
+Create a file for your chosen board and copy the contents of the python file into that board's directory. For example for the I2C Switch create a new file in Thonny called I2CSwitch.py and copy contents from  I2CSwitch.py into the new file and save it onto the Raspberry Pi Pico board.
 
 Create a second file where your main program will reside and import the board library at the top of the program.  
 
@@ -54,7 +54,7 @@ I2CSwitch(address, sda, scl)
 The I2CSwitch class provides control over the I2C Switch outputs on the PCA9546A controller.  Functions include setting and getting the I2C channel and resetting the switch.  
 
 **Parameters:**  
-address: Device i2c address. Supported I2C addresses are 0x70 to 0x77. defaults to 0x70  
+address: Device i2c address. Supported I2C addresses are 0x70 to 0x77. defaults to 0x70.  
 sda (optional): I2C SDA pin.  If no value is set the class will default to pin 20.  
 scl (optional): I2C SCL pin.  If no value is set the class will default to pin 21.  
 
@@ -96,7 +96,7 @@ Get the state for the selected channel.
 ```
 reset() 
 ```
-Reset the PCA9546A I2C switch.  Resetting allows the PCA9546A to recover from a situation in which one of the downstream I2C buses is stuck in a low state.  All channels will be set to an off state.  
+Reset the PCA9546A I2C switch.  Resetting allows the PCA9546A to recover from a situation in which one of the downstream I2C buses is stuck in a low state.  All channels will be set to an off-state.  
 **Returns:** null  
 
 
@@ -107,7 +107,7 @@ To use the I2C Switch class in your code you must first import the class:
 ```
 from I2CSwitch import I2CSwitch
 ```
-Next you must initialise the I2CSwitch object:
+Next, you must create and initialise an object called i2cswitch using the I2CSwitch class:
 ```
 i2cswitch = I2CSwitch(0x70)
 ```

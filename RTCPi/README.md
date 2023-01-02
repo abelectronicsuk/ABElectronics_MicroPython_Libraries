@@ -7,7 +7,7 @@ The example python files can be found in /ABElectronics_MicroPython_Libraries/RT
 
 ### Downloading and Installing the library
 
-To download to your Raspberry Pi type in terminal: 
+To download to your Raspberry Pi type in the terminal: 
 
 ```
 git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries.git
@@ -15,7 +15,7 @@ git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries
 
 To install the MicroPython Library use the Thonny Python IDE from https://thonny.org/
 
-Create a file for your chosen board and copy the contents of the python file in that board's directory. For example for the RTC Pi create a new file in thonny called RTCPi.py and copy contents from  RTCPi.py into the new file and save it onto the Raspberry Pi Pico board.
+Create a file for your chosen board and copy the contents of the python file into that board's directory. For example for the RTC Pi create a new file in Thonny called RTCPi.py and copy contents from  RTCPi.py into the new file and save it onto the Raspberry Pi Pico board.
 
 Create a second file where your main program will reside and import the board library at the top of the program.  
 
@@ -117,7 +117,7 @@ To use the RTC Pi library in your code you must first import the library:
 from RTCPi import RTC
 ```
 
-Next you must initialise the RTC object:
+Next, you must initialise the RTC object:
 
 ```
 rtc = RTC()
@@ -131,7 +131,7 @@ Enable the square-wave output at 8.192KHz on the SQW pin:
 rtc.set_frequency(3)
 rtc.enable_output()
 ```
-Read the current date and time from the RTC at 1 second intervals:
+Read the current date and time from the RTC at 1-second intervals:
 ```
 while (True):
   print rtc.read_date()

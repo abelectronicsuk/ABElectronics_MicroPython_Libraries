@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics ADC Pi TMP36 temperature sensor demo for MicroMicroPython Library
+ABElectronics ADC Pi TMP36 temperature sensor demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create ADCPi.py file and copy contents from  ADCPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called ADCPi.py, copy contents from ADCPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_tmp36.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_tmp36.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -19,7 +19,7 @@ Run with "Run Current Command" or F5 in Thonny
 Initialise the ADC device using the default addresses and sample rate,
 change this value if you have changed the address selection jumpers
 
-Sample rate can be 12,14, 16 or 18
+The sample rate can be 12, 14, 16 or 18
 
 """
 import time
@@ -41,7 +41,7 @@ def main():
 
         temperature = (adc.read_voltage(1)/0.01)-50
 
-        # read from adc channels and print to screen
+        # read from the ADC channels and print to screen
         print("Temperature on channel 1: %0.02f°C" % temperature)
 
         # wait 0.5 seconds before reading the pins again

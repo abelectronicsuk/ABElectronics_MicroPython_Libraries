@@ -3,22 +3,23 @@
 """
 ================================================
 AB Electronics UK ADC-DAC Pi 2-Channel ADC, 2-Channel
-DAC | DAC Sine Wave Demo for MicroMicroPython Library
+DAC | DAC Sine Wave Demo for the MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create ADCDACPi.py file and copy contents from  ADCDACPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called ADCDACPi.py, copy contents from ADCDACPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_dacsinewave.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_dacsinewave.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
 ================================================
 
-this demo uses the set_dac_raw method to generate a sine wave from a
+This demo uses the set_dac_raw method to generate a sine wave from a
 predefined set of values
+
 """
 
 import time
@@ -31,7 +32,7 @@ def main():
     Main program function
     '''
 
-    # create an instance of the ADCDAC Pi with a DAC gain set to 1
+    # create an instance of the ADCDACPi class with a DAC gain set to 1
     adcdac = ADCDACPi(1)
 
     sinewave_array = \

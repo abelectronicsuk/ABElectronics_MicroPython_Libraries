@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics IO Pi | IO Interrupts Demo for MicroMicroPython Library
+AB Electronics UK IO Pi | IO Interrupts Demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create IOPI.py file and copy contents from  IOPI.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called IOPI.py, copy contents from IOPI.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_iointerrupts.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_iointerrupts.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -35,7 +35,7 @@ def main():
     # Create an instance of the IOPi class with an I2C address of 0x20 with SDA on pin 20 and SCL on pin 21
     iobus = IOPi(0x20,20,21)
 
-    # Set all pins on the IO bus to be inputs with internal pull-ups enabled.
+    # Set all pins on the IO bus as inputs with internal pull-ups enabled.
 
     iobus.set_port_pullups(0, 0xFF)
     iobus.set_port_pullups(1, 0xFF)
@@ -46,16 +46,16 @@ def main():
     iobus.invert_port(0, 0xFF)
     iobus.invert_port(1, 0xFF)
 
-    # Set the interrupt polarity to be active high and mirroring disabled, so
+    # Set the interrupt polarity as active high and mirroring disabled, so
     # pins 1 to 8 trigger INT A and pins 9 to 16 trigger INT B
     iobus.set_interrupt_polarity(1)
     iobus.mirror_interrupts(0)
 
-    # Set the interrupts default value to 0x00 so the interrupt will trigger when any pin registers as true
+    # Set the interrupt default value to 0x00 so the interrupt will trigger when any pin registers as true
     iobus.set_interrupt_defaults(0, 0x00)
     iobus.set_interrupt_defaults(1, 0x00)
 
-    # Set the interrupt type to be 1 for ports A and B so an interrupt is
+    # Set the interrupt type as 1 for ports A and B so an interrupt is
     # fired when the pin matches the default value
     iobus.set_interrupt_type(0, 0xFF)
     iobus.set_interrupt_type(1, 0xFF)
@@ -67,7 +67,7 @@ def main():
     while True:
 
         # read the interrupt status for each port.  
-        # If the status is not 0 then an interrupt has occured on one of the pins 
+        # If the status is not 0 then an interrupt has occurred on one of the pins 
         # so read the value from the interrupt capture.
 
         if (iobus.read_interrupt_status(0) != 0):

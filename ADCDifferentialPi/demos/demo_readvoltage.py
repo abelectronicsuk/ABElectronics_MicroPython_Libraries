@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics ADC Differential Pi 8-Channel ADC demo for MicroMicroPython Library
+AB Electronics UK ADC Differential Pi 8-Channel ADC demo for the MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create ADCPi.py file and copy contents from  ADCPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called ADCPi.py, copy contents from ADCPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_readvoltage.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_readvoltage.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -18,7 +18,7 @@ Run with "Run Current Command" or F5 in Thonny
 
 Initialise the ADC device using the default addresses and sample rate,
 change this value if you have changed the address selection jumpers
-Sample rate can be 12,14, 16 or 18
+Sample rate can be 12, 14, 16 or 18
 
 """
 import time
@@ -33,7 +33,7 @@ def main():
 
     while True:
 
-        # read from adc channels and print to screen
+        # read from the ADC channels and print to screen
         print("Channel 1: %d" % adc.read_voltage(1))
         print("Channel 2: %d" % adc.read_voltage(2))
         print("Channel 3: %d" % adc.read_voltage(3))

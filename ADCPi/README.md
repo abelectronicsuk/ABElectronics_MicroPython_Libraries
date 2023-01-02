@@ -7,7 +7,7 @@ The example python files can be found in /ABElectronics_MicroPython_Libraries/AD
 
 ### Downloading and Installing the library
 
-To download to your Raspberry Pi type in terminal: 
+To download to your Raspberry Pi type in the terminal: 
 
 ```
 git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries.git
@@ -15,7 +15,7 @@ git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries
 
 To install the MicroPython Library use the Thonny Python IDE from https://thonny.org/
 
-Create a file for your chosen board and copy the contents of the python file in that board's directory. For example for the ADC Pi create a new file in thonny called ADCPi.py and copy contents from  ADCPi.py into the new file and save it onto the Raspberry Pi Pico board.
+Create a file for your chosen board and copy the contents of the python file into that board's directory. For example for the ADC Pi create a new file in Thonny called ADCPi.py and copy contents from  ADCPi.py into the new file and save it onto the Raspberry Pi Pico board.
 
 Create a second file where your main program will reside and import the board library at the top of the program.  
 
@@ -66,7 +66,7 @@ read_voltage(channel)
 ```
 Read the voltage from the selected channel  
 **Parameters:** channel - 1 to 8  
-**Returns:** number as float between 0 and 5.0
+**Returns:** number as a float between 0 and 5.0
 
 ---
 ```
@@ -74,7 +74,7 @@ read_raw(channel)
 ```
 Read the raw int value from the selected channel  
 **Parameters:** channel - 1 to 8  
-**Returns:** number as int
+**Returns:** number as an int
 
 ---
 ```
@@ -88,7 +88,7 @@ Set the gain of the PGA on the chip
 ```
 setBitRate(rate)
 ```
-Set the sample bit rate of the adc  
+Set the sample bit rate of the ADC  
 **Parameters:** rate -  12, 14, 16, 18  
 **Returns:** null  
 12 = 12 bit (240SPS max)  
@@ -100,7 +100,7 @@ Set the sample bit rate of the adc
 ```
 set_conversion_mode(mode)
 ```
-Set the conversion mode for the adc  
+Set the conversion mode for the ADC  
 **Parameters:** mode -  0 = One-shot conversion, 1 = Continuous conversion  
 **Returns:** null  
 
@@ -113,13 +113,13 @@ To use the ADC Pi library in your code you must first import the library:
 from ADCPi import ADCPi
 ```
 
-Next you must initialise the adc object:
+Next, you must create and initialise an adc object from the ADCPi class:
 ```
 adc = ADCPi(0x68, 0x69, 18)
 ```
 The first two arguments are the I2C addresses of the ADC chips. The values shown are the default addresses of the ADC board.  
 
-The third argument is the sample bit rate you want to use on the adc chips. Sample rate can be 12, 14, 16 or 18  
+The third argument is the sample bit rate you want to use on the ADC chips. The sample rate can be 12, 14, 16 or 18  
 
 You can now read the voltage from channel 1 with:
 ```

@@ -2,22 +2,22 @@
 
 """
 ================================================
-ABElectronics RTC Pi | Get Time Demo for MicroMicroPython Library
+AB Electronics UK RTC Pi | Get Time Demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create RTCPi.py file and copy contents from  RTCPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called RTCPi.py, copy contents from RTCPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_rtcgetdate.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_rtcgetdate.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
 ===============================================
 
 This demo shows how to read the current time on the 
-RTC Pi real-time clock at 1 second intervals
+RTC Pi real-time clock at 1-second intervals
 """
 import time
 

@@ -3,7 +3,7 @@
 ================================================
 AB Electronics UK: IO Zero 32
 
-Raspberry Pi Pico MicroMicroPython Library
+Raspberry Pi Pico MicroPython Library
 ================================================
 
 32-Channel Port Expander based on the PCA9535.
@@ -18,7 +18,7 @@ import machine
 
 class IOZero32(object):
     """
-    The PCA9535 contains a 16 bit bus split into two 8-bit ports.  
+    The PCA9535 contains a 16-bit bus split into two 8-bit ports.  
     Port 0 controls pins 1 to 8 while Port 1 controls pins 9 to 16.
     #
     """
@@ -44,10 +44,10 @@ class IOZero32(object):
 
         :param address: i2c address for the target device, 0x20 to 0x27
         :type address: int       
-        :param address: sda pin
-        :type address: int
-        :param address: scl pin
-        :type address: int
+        :param sda: SDA pin
+        :type sda: int
+        :param scl: SCL pin
+        :type scl: int
         """
 
         if address < 0x20 or address > 0x27:
@@ -83,7 +83,7 @@ class IOZero32(object):
         :type byte: int
         :param bit: location within value to check
         :type bit: int
-        :return: value of selected bit, 0 or 1
+        :return: value of the selected bit, 0 or 1
         :rtype: int
         """
         value = 0

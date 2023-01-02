@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics RTC Pi | RTC memory double demo for MicroMicroPython Library
+AB Electronics UK RTC Pi | RTC memory double demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create RTCPi.py file and copy contents from  RTCPi.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called RTCPi.py, copy contents from RTCPi.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_rtcmemory_int.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_rtcmemory_int.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -25,7 +25,7 @@ from RTCPi import RTC
 import struct
 def int_to_array(val):
     '''
-    convert an integer into a four byte array
+    convert an integer into a four-byte array
     '''
     arraybytes = [0, 0, 0, 0]
     arraybytes[3] = val & 0xFF
@@ -40,7 +40,7 @@ def int_to_array(val):
 
 def array_to_int(arraybytes):
     '''
-    convert a four byte array into an integer
+    convert a four-byte array into an integer
     '''
     val = (arraybytes[0] << 24) + (arraybytes[1] << 16) + \
           (arraybytes[2] << 8) + arraybytes[3]

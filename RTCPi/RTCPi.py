@@ -3,7 +3,7 @@
 ================================================
 AB Electronics UK: RTC Pi Real-time clock
 
-Requires smbus2 or python smbus to be installed
+Raspberry Pi Pico MicroPython Library
 ================================================
 """
 import machine
@@ -15,7 +15,7 @@ class RTC:
     Based on the Maxim DS1307
     """
 
-    # define registers from datasheet
+    # define registers from the datasheet
     SECONDS = 0x00
     MINUTES = 0x01
     HOURS = 0x02
@@ -75,7 +75,7 @@ class RTC:
     @staticmethod
     def __dec_bcd(dec):
         """
-        Internal method for converting decimal formatted number to BCD
+        Internal method for converting a decimal formatted number to BCD
 
         :param dec: decimal number
         :type dec: int
@@ -161,7 +161,7 @@ class RTC:
 
         self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 7, 1)
         self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 4, 1)
-        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL,bytearray(self.__rtcconfig))
+        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL, bytearray(self.__rtcconfig))
         return
 
     def disable_output(self):
@@ -171,7 +171,7 @@ class RTC:
 
         self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 7, 0)
         self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 4, 0)
-        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL,bytearray(self.__rtcconfig))
+        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL, bytearray(self.__rtcconfig))
         return
 
     def set_frequency(self, frequency):
@@ -194,7 +194,7 @@ class RTC:
         if frequency == 4:
             self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 0, 1)
             self.__rtcconfig = self.__updatebyte(self.__rtcconfig, 1, 1)        
-        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL,bytearray(self.__rtcconfig))
+        self.__bus.writeto_mem(self.__rtcaddress, self.CONTROL, bytearray(self.__rtcconfig))
         return
 
     def write_memory(self, address, valuearray):

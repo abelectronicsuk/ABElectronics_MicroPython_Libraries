@@ -7,7 +7,7 @@ The example python files can be found in /ABElectronics_MicroPython_Libraries/IO
 
 ### Downloading and Installing the library
 
-To download to your Raspberry Pi type in terminal: 
+To download to your Raspberry Pi type in the terminal: 
 
 ```
 git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries.git
@@ -15,7 +15,7 @@ git clone https://github.com/abelectronicsuk/ABElectronics_MicroPython_Libraries
 
 To install the MicroPython Library use the Thonny Python IDE from https://thonny.org/
 
-Create a file for your chosen board and copy the contents of the python file in that board's directory. For example for the IO Zero 32 create a new file in thonny called IOZero32.py and copy contents from  IOZero32.py into the new file and save it onto the Raspberry Pi Pico board.
+Create a file for your chosen board and copy the contents of the python file into that board's directory. For example, for the IO Zero 32 create a new file in Thonny called IOZero32.py and copy contents from  IOZero32.py into the new file and save it onto the Raspberry Pi Pico board.
 
 Create a second file where your main program will reside and import the board library at the top of the program.  
 
@@ -210,19 +210,19 @@ To use the IO Zero 32 library in your code you must first import the library:
 from IOZero32 import IOZero32
 ```
 
-Next you must initialise the IOZero32 object with the I2C address of the I/O controller chip.  The default addresses for the IO Zero 32 are 0x20 and 0x21:
+Next, you must initialise the IOZero32 object with the I2C address of the I/O controller chip.  The default addresses for the IO Zero 32 are 0x20 and 0x21:
 
 ```
 bus1 = IOZero32(0x20)
 ```
 
-We will read the inputs 1 to 8 from bus 1 so set port 0 to be inputs.  
+We will read the inputs 1 to 8 from bus 1 so set port 0 as inputs.  
 
 ```
 bus1.set_port_direction(0, 0xFF)
 ```
 
-You can now read the pin 1 with:
+You can now read pin 1 with:
 ```
 print('Pin 1: ' + str(bus1.read_pin(1)))
 ```

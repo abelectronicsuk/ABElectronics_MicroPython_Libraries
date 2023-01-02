@@ -3,7 +3,7 @@
 ================================================
 AB Electronics UK: I2CSwitch - 4 Channel I2C Switch
 
-Raspberry Pi Pico MicroMicroPython Library
+Raspberry Pi Pico MicroPython Library
 ================================================
 """
 
@@ -39,7 +39,7 @@ class I2CSwitch(object):
         :type byte: int
         :param bit: location within value to check
         :type bit: int
-        :return: value of selected bit, 0 or 1
+        :return: value of the selected bit, 0 or 1
         :rtype: int
         """
         value = 0
@@ -68,7 +68,7 @@ class I2CSwitch(object):
 
     def __write(self, value):
         """
-        Internal method to write data to I2C bus
+        Internal method for writing data to the I2C bus
 
         :param value: value to write
         :type value: int
@@ -80,7 +80,7 @@ class I2CSwitch(object):
 
     def __read(self):
         """
-        Internal method to read data from I2C bus
+        Internal method for reading data from the I2C bus
 
         :return: IOError
         :rtype: IOError
@@ -96,15 +96,15 @@ class I2CSwitch(object):
 
     def __init__(self, address=0x70,  sda=None, scl=None):
         """
-        Initialise object with i2c address for the I2C Switch board
+        Initialise object with the I2C address for the I2C Switch board
 
-        :param address: device i2c address, defaults to 0x70
+        :param address: device I2C address, defaults to 0x70
         :type address: int, optional
         :type bus: int, optional
-        :param address: sda pin
-        :type address: int
-        :param address: scl pin
-        :type address: int
+        :param sda: SDA pin
+        :type sda: int
+        :param scl: SCL pin
+        :type scl: int
         """
         
         if sda == None or sda < 0 or sda > 40:           
@@ -148,7 +148,7 @@ class I2CSwitch(object):
 
         :param channel: 1 to 4
         :type channel: int
-        :param state: True of False
+        :param state: True or False
         :type state: bool
         :raises ValueError: set_channel: channel out of range (1 to 4)
         :raises ValueError: set_channel: state out of range (True or False)
@@ -189,7 +189,7 @@ class I2CSwitch(object):
         Reset the PCA9546A I2C switch.
         Resetting allows the PCA9546A to recover from a situation in which one
         of the downstream I2C buses is stuck in a low state.
-        All channels will be set to an off state.
+        All channels will be set to an off-state.
 
         :raises ValueError: Failed to write to GPIO pin
         """

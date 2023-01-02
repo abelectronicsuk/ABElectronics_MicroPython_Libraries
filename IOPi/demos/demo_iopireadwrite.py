@@ -2,15 +2,15 @@
 
 """
 ================================================
-ABElectronics IO Pi | Digital I/O Read and Write Demo for MicroMicroPython Library
+AB Electronics UK IO Pi | Digital I/O Read and Write Demo for MicroPython Library
 
 Run using Thonny Python IDE from https://thonny.org/
 
-Create IOPI.py file and copy contents from  IOPI.py to file and save
-onto Raspberry Pi Pico
+Create a file in Thonny called IOPI.py, copy contents from IOPI.py 
+to the file and save it onto the Raspberry Pi Pico
 
-Create file named demo_iopireadwrite.py and copy code from this file and save
-onto Raspberry Pi Pico
+Create a file named demo_iopireadwrite.py, copy the code from this file and save
+onto the Raspberry Pi Pico
 
 Run with "Run Current Command" or F5 in Thonny
 
@@ -37,20 +37,20 @@ def main():
     # the default i2c addresses
     
     # Create an instance of the IOPi class with an I2C address of 0x20 with SDA on pin 20 and SCL on pin 21
-    # bus 1 will be inputs
+    # bus 1 will be inputs.
     iobus1 = IOPi(0x20,20,21)
     # Create an instance of the IOPi class with an I2C address of 0x21 with SDA on pin 20 and SCL on pin 21
-    # bus 2 will be outputs
+    # bus 2 will be outputs.
     iobus2 = IOPi(0x21,20,21)
     
-    # Each bus is divided up two 8 bit ports.  Port 0 controls pins 1 to 8,
+    # Each bus is divided up into two 8-bit ports.  Port 0 controls pins 1 to 8,
     # Port 1 controls pins 9 to 16.
-    # We will read the inputs on pin 1 of bus 1 so set port 0 to be inputs and
+    # We will read the inputs on pin 1 of bus 1 so set port 0 as inputs and
     # enable the internal pull-up resistors
     iobus1.set_port_direction(0, 0xFF)
     iobus1.set_port_pullups(0, 0xFF)
 
-    # We will write to the output pin 1 on bus 2 so set port 0 to be outputs
+    # We will write to the output pin 1 on bus 2 so set port 0 as outputs
     # and turn off the pins on port 0
     iobus2.set_port_direction(0, 0x00)
     iobus2.write_port(0, 0x00)
